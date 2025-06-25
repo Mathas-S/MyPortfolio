@@ -73,6 +73,7 @@ main {
   padding: 2rem;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: -2rem;
 }
 
 .profile-pic {
@@ -122,6 +123,16 @@ main {
 .skills-highlight span:hover {
   background-color: #1470e6;
   color: white;
+}
+
+.intro-text {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 300;
+  max-width: 1000px;
+  text-align: center;
 }
 
 
