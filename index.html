@@ -77,10 +77,61 @@
 
 </section>
 
-    <section id="projects" class="page hidden">
-      <h1>Projects</h1>
-      <p>HiwjungRecipe, AirconCleaning, etc.</p>
-    </section>
+    <section id="projects" class="page">
+  <h1>My Projects</h1>
+
+  <div class="slide-container">
+    <button class="slide-btn left" onclick="prevSlide()">&#60;</button>
+    
+    <div class="slide-wrapper" id="slide">
+      
+    <div class="project-card">
+  <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+  <div class="project-info">
+    <h3>HiwjungRecipe</h3>
+    <div class="project-tags">
+      <span>React.js</span>
+      <span>Express.js</span>
+      <span>MongoDB</span>
+    </div>
+    <p>React + Express + MongoDB web app for sharing recipes</p>
+  </div>
+</div>
+
+
+      <div class="project-card">
+  <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+  <div class="project-info">
+    <h3>HiwjungRecipe</h3>
+    <div class="project-tags">
+      <span>React.js</span>
+      <span>Express.js</span>
+      <span>MongoDB</span>
+    </div>
+    <p>React + Express + MongoDB web app for sharing recipes</p>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+  <div class="project-info">
+    <h3>HiwjungRecipe</h3>
+    <div class="project-tags">
+      <span>React.js</span>
+      <span>Express.js</span>
+      <span>MongoDB</span>
+    </div>
+    <p>React + Express + MongoDB web app for sharing recipes</p>
+  </div>
+</div>
+
+     
+    </div>
+
+    <button class="slide-btn right" onclick="nextSlide()">&#62;</button>
+  </div>
+</section>
+
 
     <section id="contact" class="page hidden">
       <h1>Contact Me</h1>
@@ -111,8 +162,30 @@
       document.getElementById('nav-' + pageId).classList.add('active');
     }
 
+    
+
 
     window.onload = () => showPage('profile');
+    let currentIndex = 0;
+  const slide = document.getElementById('slide');
+  const cards = document.querySelectorAll('.project-card');
+
+  function updateSlide() {
+    const offset = -currentIndex * 100;
+    slide.style.transform = `translateX(${offset}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    updateSlide();
+  }
+
+    
   </script>
 </body>
 

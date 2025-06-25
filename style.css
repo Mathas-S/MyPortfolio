@@ -126,3 +126,127 @@ main {
   object-fit: contain;
 }
 
+#projects {
+  padding-top: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+#projects h1{
+  font-size: 50px;
+}
+
+.slide-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100%;
+  min-height: 500px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.26);
+  border: rgba(255, 255, 255, 0.712) solid;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-info {
+  max-width: 90%;
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.project-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0.6rem 0.9rem;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.project-tags {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+
+
+}
+
+.project-tags span {
+  background: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: solid white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  user-select: none;
+  cursor: text;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.project-tags span:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);  
+}
+
+.slide-btn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-50%) scale(1.1);
+  color: #000;
+}
+
+.slide-btn.left {
+  left: 20px;
+}
+
+.slide-btn.right {
+  right: 20px;
+}
+
+
