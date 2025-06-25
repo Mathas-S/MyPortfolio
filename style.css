@@ -249,4 +249,20 @@ main {
   right: 20px;
 }
 
+.project-role {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center; /* หรือ flex-start */
+}
+
+.project-role span {
+  background: #1067d8; /* สีทอง หรือเลือกสีอื่น */
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: white solid;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
