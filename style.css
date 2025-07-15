@@ -430,7 +430,7 @@ main {
   font-size: 0.8rem;
   color: #666;
   text-align: center;
-  word-break: break-all;    /* ตัดคำเวลาล้น */
+  word-break: break-all;    
   margin-top: 0.5rem;
   max-width: 100%;
   line-height: 1.4;
@@ -439,7 +439,7 @@ main {
 footer {
   text-align: center;
   padding: 1.5rem 0;
-  background-color: rgba(255, 255, 255, 0.05); /* โปร่งนิดๆ */
+  background-color: rgba(255, 255, 255, 0.05); 
   color: #615e5e;
   font-size: 0.9rem;
   margin-top: 3rem;
@@ -447,3 +447,134 @@ footer {
   backdrop-filter: blur(4px);
 }
 
+
+@media (max-width: 1024px) {
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .project-card {
+    padding: 2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border-radius: 12px;
+    padding: 1em 0.5em;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.3em 0;
+    padding: 0.6em 1em;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  .profile-container{
+    margin-top: 15rem;
+  }
+
+  .skills {
+    font-size: 2rem;
+    margin-top: 15rem;
+  }
+
+  .skill-group h2 {
+    font-size: 1.4rem;
+  }
+
+  .slide-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .profile-container p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .contact-items{
+    margin-top: 7rem;
+  }
+  
+  .contact-card {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .slide-btn.left {
+    left: 10px;
+  }
+
+  .slide-btn.right {
+    right: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+
+  .project-card img {
+    max-width: 90%;
+    max-height: 200px;
+  }
+
+  .skill-item {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    min-width: 100px;
+  }
+
+  .skills-highlight span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
