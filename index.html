@@ -12,7 +12,12 @@
 <body>
 
   <header>
-    <nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="main-nav">
       <a href="#" id="nav-profile" onclick="showPage('profile')">Profile</a>
       <a href="#" id="nav-skills" onclick="showPage('skills')">Skills</a>
       <a href="#" id="nav-projects" onclick="showPage('projects')">Projects</a>
@@ -24,8 +29,11 @@
   <main>
     <section id="profile" class="page">
       <div class="profile-container">
-        <img src="assets/profile.jpeg" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-pic-wrapper">
+          <img src="assets/profile.jpeg" alt="Profile Picture" class="profile-pic" />
+        </div>
         <div class="profile-text">
+          <p class="work-status">Exploring new opportunities.</p>
           <h1>Hi, I'm Mathas Sornphrom</h1>
           <h2>💻 Fullstack Developer | 🎓 Computer Science Graduate, Thammasat University</h2>
           <div class="skills-highlight">
@@ -39,11 +47,81 @@
             <span>MySQL</span>
             <span>MongoDB</span>
           </div>
+          <div class="profile-message">
+            I'm a Full-stack Developer with a strong foundation in modern web technologies, dedicated to building
+            practical and scalable digital solutions. With hands-on experience developing complete systems across both
+            frontend and backend, I focus on creating efficient, maintainable web applications and enjoy working across
+            the entire stack.
+          </div>
+          <button class="explore-btn" onclick="showPage('projects')">Explore My Projects</button>
         </div>
-        <p class="intro-text">
-            I started coding when I entered university and quickly found a passion for developing websites and web
-            applications.
-          </p>
+      </div>
+      <div id="profile-experience" class="profile-experience">
+        <h2>Work Experience &amp; Projects</h2>
+        <div class="experience-single experience-row">
+          <div class="experience-img-col">
+            <img src="assets/projects/vincentclinic.jpg" alt="Vincent Clinic" class="experience-img-small" />
+          </div>
+          <div class="experience-info-col">
+            <h3 class="experience-title-large">Web Developer Intern</h3>
+            <h3 class="experience-title-small">Vincent International Co., Ltd. | Aug 2025 – Nov 2025</h3>
+            <p class="experience-desc-large">
+              Developed a CRM system to support clinic staff across different teams in leveraging analyzed data for
+              marketing strategies and other business operations. Additionally, enhanced the main website to improve SEO
+              performance and increase online visibility.
+            </p>
+            <div class="experience-tags">
+              <span>Full stack Development</span>
+              <span>Web Application</span>
+              <span>CRM Management System</span>
+            </div>
+          </div>
+        </div>
+        <!-- 2x2 Projects Grid -->
+        <div class="experience-projects-grid">
+          <div class="experience-project-item">
+            <img src="assets/projects/tugigs.png" alt="TuGigs" />
+            <div class="experience-project-content">
+              <h3>Tu Gigs Find and Hire</h3>
+              <p>A graduate project focused on building a web application that helps university students and staff find
+                part-time opportunities more easily and securely. The platform integrates TU API for authentication and
+                includes an admin dashboard to manage users and job postings efficiently.</p>
+            </div>
+          </div>
+          <div class="experience-project-item">
+            <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+            <div class="experience-project-content">
+              <h3>HiwjungRecipe</h3>
+              <p>A web platform that curates and shares diverse recipes, enabling users to easily discover, search, and
+                contribute their favorite dishes.
+                Built as a hands-on project to master the end-to-end web development lifecycle, From planning and design
+                to deploying a fully functional application.</p>
+            </div>
+          </div>
+          <div class="experience-project-item">
+            <img src="assets/projects/bookstore.png" alt="BookStore" />
+            <div class="experience-project-content">
+              <h3>Abdul's Bookstore</h3>
+              <p>A web application built to streamline bookstore operations and improve staff efficiency.
+                Developed through team collaboration, with a strong focus on database design, data modeling, and
+                building scalable system architecture for real-world business use.</p>
+            </div>
+          </div>
+          <div class="experience-project-item">
+            <img src="assets/projects/airconcleaning.png" alt="AirconCleaning" />
+            <div class="experience-project-content">
+              <h3>Aircon Cleaning Backend</h3>
+              <p>A backend service that centralizes communication between property managers and technician teams,
+                enabling faster and more efficient coordination.
+                Built to apply service design principles and gain hands-on experience with RESTful API architecture in
+                real-world scenarios.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+      </div>
       </div>
     </section>
 
@@ -53,13 +131,13 @@
         <h2>Frontend</h2>
         <div class="skill-grid">
           <div class="skill-item"><img src="assets/logos/html.svg" alt="HTML" />HTML</div>
-          <div class="skill-item"><img src="assets/logos/css.svg" alt="CSS" />CSS</div>      
+          <div class="skill-item"><img src="assets/logos/css.svg" alt="CSS" />CSS</div>
           <div class="skill-item"><img src="assets/logos/react.svg" alt="React" />React.js</div>
           <div class="skill-item"><img src="assets/logos/nextjs.svg" alt="Next.js" />Next.js</div>
-          <div class="skill-item"><img src="assets/logos/vue.svg" alt="Vue.js" />Vue.js</div> 
-           <div class="skill-item"><img src="assets/logos/javascript.svg" alt="JS" />JavaScript</div>
+          <div class="skill-item"><img src="assets/logos/vue.svg" alt="Vue.js" />Vue.js</div>
+          <div class="skill-item"><img src="assets/logos/javascript.svg" alt="JS" />JavaScript</div>
           <div class="skill-item"><img src="assets/logos/typescript.svg" alt="TS" />TypeScript</div>
-         <div class="skill-item"><img src="assets/logos/tailwind.svg" alt="Tailwind" />Tailwind</div>
+          <div class="skill-item"><img src="assets/logos/tailwind.svg" alt="Tailwind" />Tailwind</div>
         </div>
       </div>
 
@@ -68,7 +146,7 @@
         <div class="skill-grid">
           <div class="skill-item"><img src="assets/logos/express.svg" alt="Express" />Express.js</div>
           <div class="skill-item"><img src="assets/logos/nodejs.svg" alt="Node.js" />Node.js</div>
-          <div class="skill-item"><img src="assets/logos/springboot.svg" alt="Spring Boot" />Spring Boot</div> 
+          <div class="skill-item"><img src="assets/logos/springboot.svg" alt="Spring Boot" />Spring Boot</div>
           <div class="skill-item"><img src="assets/logos/bun.svg" alt="Bun" />Bun</div>
         </div>
       </div>
@@ -96,39 +174,67 @@
     </section>
 
     <section id="projects" class="page">
-      <h1>My Project Experiences</h1>
+      <div class="projects-header">
+        <h1>My Project Experiences</h1>
+        <p>Selected projects focused on full-stack development, system design, and practical business solutions.</p>
+      </div>
 
       <div class="slide-container">
-        <button class="slide-btn left" onclick="prevSlide()">&#8249;</button>
+        <button class="slide-btn left" onclick="prevSlide()" aria-label="Previous project">&#8249;</button>
 
         <div class="slide-wrapper" id="slide">
 
-          <div class="project-card">
-            <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/tugigs.png" alt="Tugigs" />
+            </div>
+            <div class="project-info">
+              <h3>Tu Gigs Find and Hire</h3>
+              <div class="project-role">
+                <span>Full-stack Development</span>
+              </div>
+              <div class="project-tags">
+                <span>React.js</span>
+                <span>Express.js</span>
+                <span>PostgreSQL</span>
+              </div>
+              <p>
+                Developed a full-stack job discovery platform for students and staff at Thammasat University. Implemented TU API authentication, tag-based job discovery, job likes, and an administrative back-office system. Took ownership of frontend, backend, and database design.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/hiwjungrecipe.png" alt="HiwjungRecipe" />
+            </div>
             <div class="project-info">
               <h3>HiwjungRecipe</h3>
+              <div class="project-role">
+                <span>Full-stack Development</span>
+              </div>
               <div class="project-tags">
                 <span>React.js</span>
                 <span>Express.js</span>
                 <span>MongoDB</span>
               </div>
-              <div class="project-role">
-                <span>Fullstack Develoment</span>
-              </div>
-              <p>Created a full-stack web application for discovering and sharing cooking recipes, built using React.js
-                for the frontend, Express.js for the backend, and MongoDB for the database.
-                The platform features a user authentication system that allows users to securely register,
-                log in. Authenticated users can browse a wide variety of recipes, search based on ingredients or
-                keywords,
-                and contribute their own creations by uploading recipe details including title, description,
-                ingredients, and cooking instructions.</p>
+              <p>
+                Built a full-stack web application for discovering and sharing cooking recipes.
+                Implemented secure authentication, recipe search by keyword and ingredients, and user-generated recipe
+                publishing.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card">
-            <img src="assets/projects/bookstore.png" alt="BookStore" />
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/bookstore.png" alt="BookStore" />
+            </div>
             <div class="project-info">
               <h3>Abdul's Bookstore</h3>
+              <div class="project-role">
+                <span>Frontend Development</span>
+              </div>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -136,36 +242,36 @@
                 <span>PHP</span>
                 <span>MySQL</span>
               </div>
-              <div class="project-role">
-                <span>Frontend Development</span>
-              </div>
-              <p>Developed an internal web application for staff to manage the book rental process using HTML, CSS, and
-                JavaScript.
-                Focused on improving workflow efficiency and minimizing manual errors in the rental management process.
+              <p>
+                Developed an internal web application to support staff in managing book rental workflows.
+                Improved process speed and reduced manual operational errors through a clearer, task-focused interface.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="project-card">
-            <img src="assets/projects/airconcleaning.png" alt="AirconCleaning" />
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/projects/airconcleaning.png" alt="AirconCleaning" />
+            </div>
             <div class="project-info">
               <h3>Aircon Cleaning Backend Management System</h3>
-              <div class="project-tags">
-                <span>Spring boot</span>
-              </div>
               <div class="project-role">
                 <span>Backend Development</span>
               </div>
-              <p>Designed and developed a backend management web service for Condominium Juristic Persons to streamline
-                and coordinate air conditioner maintenance processes.
-                Built using Spring Boot. Integrated RESTful APIs to support communication between frontend and backend
-                systems.</p>
+              <div class="project-tags">
+                <span>Spring Boot</span>
+                <span>REST API</span>
+              </div>
+              <p>
+                Designed and developed a backend management service for condominium juristic operations.
+                Built RESTful APIs to streamline communication between teams and improve maintenance coordination.
+              </p>
             </div>
-          </div>
+          </article>
 
         </div>
 
-        <button class="slide-btn right" onclick="nextSlide()">&#8250;</button>
+        <button class="slide-btn right" onclick="nextSlide()" aria-label="Next project">&#8250;</button>
       </div>
     </section>
 
@@ -184,14 +290,12 @@
           <img src="assets/logos/email.svg" alt="Email" />
           <span class="urlname">Email</span>
           <span class="urllink">mathas.sornp@gmail.com</span>
+        </a>
 
-          <a class="contact-card" href="https://www.linkedin.com/in/mathas-sornphrom-04a97536a/" target="_blank">
-            <img src="assets/logos/linkedin.svg" alt="LinkedIn" />
-            <span class="urlname">LinkedIn</span>
-            <span class="urllink">Mathas Sornphrom</span>
-          </a>
-
-
+        <a class="contact-card" href="https://www.linkedin.com/in/mathas-sornphrom-04a97536a/" target="_blank">
+          <img src="assets/logos/linkedin.svg" alt="LinkedIn" />
+          <span class="urlname">LinkedIn</span>
+          <span class="urllink">Mathas Sornphrom</span>
         </a>
 
       </div>
@@ -200,7 +304,7 @@
 
   </main>
   <footer>
-    <p>&copy; 2025 Mathas Sornphrom. The journey from learner to developer begins here.</p>
+    <p>Let’s work together — contact me at <span class="footer-highlight-email">mathas.sornp@gmail.com</span></p>
   </footer>
 
   <script src="script.js"></script>
